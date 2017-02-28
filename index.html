@@ -13,6 +13,18 @@
         <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+	<style>
+		.boardBody{
+			margin-top:5px;
+			border:2px solid black;
+			background:gray;
+		}
+		.buttonRow{
+			border:2px solid gray;
+			margin:5px;
+			padding:5px;
+		}
+	</style>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="js/plugins.js"></script>
@@ -29,24 +41,34 @@
             }
 
         </script>
-        <!-- audio file declaration -->
+        
+	<!-- audio file declaration -->
         <audio id="eBradBerry" src="sound/eBradBerry.mp3"></audio>
         <audio id="thatsPrettyGood" src="sound/heyThatsPrettyGood.wav"></audio>
+        <audio id="imNotYourMother" src="sound/imNotYourMother.wav"></audio>
+        <audio id="anotherOne" src="sound/anotherOne.wav"></audio>
+        <audio id="goMax" src="sound/goMax.wav"></audio>
+        <audio id="grinchOuch" src="sound/grinchOuch.wav"></audio>
+        <audio id="grinchy1" src="sound/grinchy1.wav"></audio>
+        <audio id="grinchy2" src="sound/grinchy2.wav"></audio>
     </head>
 
     <body>
-        <div name="boardBody" id="boardBody" class="col-md-12" style="margin-top:5px; border: 2px solid black">
-            <row>
-                <p align="left">Introduction Soundzzz</p>
-                <button id="int01" name="eBradBerry" onmousedown="playSound(this)">Ethan Bradberry</button>
-                <button id="int02" name="thatsPrettyGood" onmousedown="playSound(this)">Hey That's Pretty Good!</button>
-            </row>
-            <p align="left">Cartoon lulz</p>
-            <button id="int01" name="eBradBerry" onmousedown="playSound(this)">Butt</button>
-            <button id="int02" name="thatsPrettyGood" onmousedown="playSound(this)">Sticks</button>
-            <row>
-
-            </row>
+        <div name="boardBody" id="boardBody" class="col-md-12 boardBody">
+        	<div name="sec01" class="buttonRow">
+	        	<p align="left">Goofs/Gaffs</p>
+                	<button id="GG01" name="eBradBerry" onmousedown="playSound(this)">Ethan Bradberry</button>
+                	<button id="GG02" name="thatsPrettyGood" onmousedown="playSound(this)">Hey That's Pretty Good!</button>
+                	<button id="GG03" name="imNotYourMother" onmousedown="playSound(this)">I'm not your mother!</button>
+           	</div>
+		<div name="sec02" class="buttonRow">
+			<p align="left">Grinchy Shit</p>
+            		<button id="GS01" name="grinchy1" onmousedown="playSound(this)">Grinchy (1)</button>
+            		<button id="GS02" name="grinchy2" onmousedown="playSound(this)">Grinchy (2)</button>
+            		<button id="GS03" name="goMax" onmousedown="playSound(this)">Go Max!</button>
+            		<button id="GS04" name="anotherOne" onmousedown="playSound(this)">Another one!</button>
+            		<button id="GS05" name="grinchOuch" onmousedown="playSound(this)">OUCH!!!</button>
+		</div>
         </div>
 
 
