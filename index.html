@@ -33,41 +33,29 @@
         <script>
             function playSound(source)
             {
-                if($(source).attr("name") == "eBradBerry")
-                $(source).attr("id").volume = .1;
 
-                var sound = document.getElementById($(source).attr("name"));
+                var sound = new Audio(source.getAttribute("name"));
                 sound.play();
             }
 
         </script>
-        
-	<!-- audio file declaration -->
-        <audio id="eBradBerry" src="sound/eBradBerry.mp3"></audio>
-        <audio id="thatsPrettyGood" src="sound/heyThatsPrettyGood.wav"></audio>
-        <audio id="imNotYourMother" src="sound/imNotYourMother.wav"></audio>
-        <audio id="anotherOne" src="sound/anotherOne.wav"></audio>
-        <audio id="goMax" src="sound/goMax.wav"></audio>
-        <audio id="grinchOuch" src="sound/grinchOuch.wav"></audio>
-        <audio id="grinchy1" src="sound/grinchy1.wav"></audio>
-        <audio id="grinchy2" src="sound/grinchy2.wav"></audio>
     </head>
 
     <body>
         <div name="boardBody" id="boardBody" class="col-md-12 boardBody">
         	<div name="sec01" class="buttonRow">
 	        	<p align="left">Goofs/Gaffs</p>
-                	<button id="GG01" name="eBradBerry" onmousedown="playSound(this)">Ethan Bradberry</button>
-                	<button id="GG02" name="thatsPrettyGood" onmousedown="playSound(this)">Hey That's Pretty Good!</button>
-                	<button id="GG03" name="imNotYourMother" onmousedown="playSound(this)">I'm not your mother!</button>
+                	<button id="GG01" name="sound/eBradBerry.mp3" onmousedown="playSound(this)">Ethan Bradberry</button>
+                	<button id="GG02" name="sound/heyThatsPrettyGood.wav" onmousedown="playSound(this)">Hey That's Pretty Good!</button>
+                	<button id="GG03" name="sound/imNotYourMother.wav" onmousedown="playSound(this)">I'm not your mother!</button>
            	</div>
 		<div name="sec02" class="buttonRow">
 			<p align="left">Grinchy Shit</p>
-            		<button id="GS01" name="grinchy1" onmousedown="playSound(this)">Grinchy (1)</button>
-            		<button id="GS02" name="grinchy2" onmousedown="playSound(this)">Grinchy (2)</button>
-            		<button id="GS03" name="goMax" onmousedown="playSound(this)">Go Max!</button>
-            		<button id="GS04" name="anotherOne" onmousedown="playSound(this)">Another one!</button>
-            		<button id="GS05" name="grinchOuch" onmousedown="playSound(this)">OUCH!!!</button>
+            		<button id="GS01" name="sound/grinchy1.wav" onmousedown="playSound(this)">Grinchy (1)</button>
+            		<button id="GS02" name="sound/grinchy2.wav" onmousedown="playSound(this)">Grinchy (2)</button>
+            		<button id="GS03" name="sound/goMax.wav" onmousedown="playSound(this)">Go Max!</button>
+            		<button id="GS04" name="sound/anotherOne.wav" onmousedown="playSound(this)">Another one!</button>
+            		<button id="GS05" name="sound/grinchOuch.wav" onmousedown="playSound(this)">OUCH!!!</button>
 		</div>
         </div>
 
